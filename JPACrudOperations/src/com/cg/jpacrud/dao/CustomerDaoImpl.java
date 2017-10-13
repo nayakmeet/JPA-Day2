@@ -66,5 +66,14 @@ public  class CustomerDaoImpl
 	}
 
 
+	public long getCount() {
+	
+		String str="select count(c) from Customer c";
+		TypedQuery<Long> query=entityManager.createQuery(str,Long.class);
+		long count=query.getSingleResult();
+		return count;
+	}
+
+
 }
 

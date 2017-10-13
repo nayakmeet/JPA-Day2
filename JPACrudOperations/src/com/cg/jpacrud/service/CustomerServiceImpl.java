@@ -44,5 +44,11 @@ public class CustomerServiceImpl {
 			dao.beginTransaction();
 			dao.removeCustomer(customer);
 			dao.commitTransaction();
+		}
+
+
+		public long getCount() {
+			
+			return dao.getCount();
 		}		
 }
